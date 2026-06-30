@@ -211,6 +211,36 @@ company-profile-builder/
 
 # Running the Project
 
+# Environment Variables
+
+Create the following environment files before running the application.
+
+## Backend (`backend/.env`)
+
+```env
+STUB_BASE_URL=http://localhost:9000
+API_PREFIX=/api
+DATABASE_URL=sqlite:///storage/database.db
+```
+
+| Variable | Description |
+|----------|-------------|
+| `STUB_BASE_URL` | URL of the provided Profile Builder Stub service. |
+| `API_PREFIX` | Base API prefix used by the FastAPI application. |
+| `DATABASE_URL` | SQLite database location used to store saved company profiles. |
+
+---
+
+## Frontend (`frontend/.env.local`)
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000/api
+```
+
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_API_URL` | Base URL of the FastAPI backend used by the Next.js application. |
+
 ### Start the Stub
 
 ```bash
